@@ -2,7 +2,8 @@
   <div class="container">
     <br />
     <br />
-    <vs-row>
+    <p v-if="products.length < 1">Loading...</p>
+    <vs-row v-else>
       <vs-col
         v-for="(product, index) in products"
         :key="index"
